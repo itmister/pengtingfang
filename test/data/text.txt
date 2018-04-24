@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="" lang="zh-cn"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <? readFilePath(SITE_DIR.'/tpl/html/dns_pre.html');?>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="baidu_union_verify" content="f26bd0201ded4b277d8a0ad770d0c3f4">
+    <meta id="sohu_tv_union_verify" content="xHes6_z-IjO36CQ4XQSwDLeJZRcvjuU_"/>
+    <meta name="keywords" content="上网导航,网址大全,网址导航,7654导航,7654导航网址,人民网址大全">
+    <meta name="description" content="7654导航--新一代安全上网导航，为用户提供门户、新闻、视频、游戏、小说、音乐等各种分类的优秀内容和网站入口，提供简单便捷的上网导航服务。安全舒适上网，从7654导航开始。">
+    <link rel="icon" href="<? rand_url($type); ?>img/favicon.ico" mce_href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<? rand_url($type); ?>img/favicon.ico" mce_href="img/favicon.ico" type="image/x-icon">
+
+    <!-- firefox支持gif格式的favicon -->
+    <!-- <link rel="icon" href="animated_favicon1.gif" type="image/gif" > -->
+    <title>7654导航</title>
+    <link rel="stylesheet" href="<? rand_url($type); ?>css/base.min.css?v=003091800">
+    <script>
+        var isLGwidth = (window.screen.availWidth>1250)?1:0;
+
+        var background_data=<?=$background_data?>;
+        var _date_w  = <?=date('w');?>;
+        var _hotWord = <?=$bd_search_str?>;
+        var _plugin_small = '<? rand_url($type); ?>css/plugin_small.min.css';
+        var _search_data = [];
+        var gul={},__union_p_block={};
+        var _jiankang_data = <?=json_encode($jiankang_data);?>;
+        var sertime =  <?= date('Ymd'); ?>; //服务器的时间
+        if(isLGwidth){
+            document.write('<link rel="stylesheet" href="<? rand_url($type); ?>css/page_lg.css?v=003231707">');
+        }else{
+            document.write('<link rel="stylesheet" href="<? rand_url($type); ?>css/page_new.css?v=003231707">');
+        }
+    </script>
+    <link rel="stylesheet" href="/tpl/css/bd.css">
+    <script src="<? rand_url($type); ?>js/jquery.min.js"></script>
+    <script src="<? rand_url($type); ?>js/base.js"></script>
+    <script src="<? rand_url($type); ?>js/track.js"></script>
+    <!--[if IE 6]>
+    <style>.ie6 body{behavior:url("<? rand_url($type); ?>css/csshover.htc");}</style>
+    <script src="<? rand_url($type); ?>js/fix/DDPngMin.js"></script>
+    <![endif]-->
+    <!-- 使IE8支持透明度设置 -->
+    <!--[if lt IE 9]>
+
+    <style type="text/css">
+        .dh-search.dh-search-fix {
+            background:transparent;
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5ffffff,endColorstr=#e5ffffff);
+            zoom: 1;
+        }
+    </style>
+
+    <![endif]-->
+</head>
+
+
+<? if( (date('Ymd')>= 20170606 &&  date('Ymd')<=20170608 )  || ( date('Ymd')>= 20170618 &&  date('Ymd')<=20170620) ){ ?>
+
+    <!--活动弹窗一-->
+     <div class="jd_main">
+       <a href="http://union-click.jd.com/jdc?e=0&p=AyIHVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLcj9MAWByIXoObQV6Qx5wDApbV1sIFQlUV0JSWRsuaGB2c2VYX2xjYnQwcz5uRlJPIUkvcn5BVBB7VxlsEQZVHUcUBQ4GUQpbFQkSB14aWSUHEQNSHVkXAhs3VRpaFAMVDlIYWCUyEgZlUDUUMhsDVBNeHQISA2UbXh0FFQVWGFwXBRQEZRxrXl5ZTAwrayUy&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZPH8CFnBnczROIxJqVkw%2BTERMR05aW0kaQFJHC1VuJndmZg%3D%3D" data-pos="0" data-tjname="jd618,layer_center,jd,," target="_blank"><img src="<? rand_url($type); ?>img/h618.png" class="jd_main_pic"/></a>
+         <a href="http://union-click.jd.com/jdc?e=0&p=AyIHVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLcj9MAWByIXoObQV6Qx5wDApbV1sIFQlUV0JSWRsuaGB2c2VYX2xjYnQwcz5uRlJPIUkvcn5BVBB7VxlsEQZVHUcUBQ4GUQpbFQkSB14aWSUHEQNSHVkXAhs3VRpaFAMVDlIYWCUyEgZlUDUUMhsDVBNeHQISA2UbXh0FFQVWGFwXBRQEZRxrXl5ZTAwrayUy&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZPH8CFnBnczROIxJqVkw%2BTERMR05aW0kaQFJHC1VuJndmZg%3D%3D" data-pos="0"  data-tjname="jd618,layer_center,btn,xclose," target="_blank"><img src="<? rand_url($type); ?>img/cir.png" class="jd_cicle"/> </a>
+         <img id="jd_main_img" src="<? rand_url($type); ?>img/xlosed.png" target="_blank" class="jd_closed" data-tjname="jd618,layer_center,btn,yclose," data-pos="0" />
+     </div>
+
+
+    <script>
+        if(GLOBAL.Cookie.get('jd_main')=='close'){
+            $(".jd_main").css('display','none');
+        }else{  //一天只展示一次
+
+            if(sertime >=20170606 && sertime<=20170608){
+                GLOBAL.Cookie.del('jd_main');
+                GLOBAL.Cookie.sets('jd_main','close',getExpireTime());
+            }
+        }
+
+
+        $('.jd_main a ,.jd_main #jd_main_img').on('click', function(){
+            var sertime =  <?= date('Ymd'); ?>;
+            var jd618620 = false;
+            if(sertime >=20170618 && sertime<=20170620){
+                jd618620 = true;
+            }
+
+            $(".jd_main").slideToggle(200 ,function(){
+                if($(".jd_main").css('display') == 'none' && !jd618620){
+                    GLOBAL.Cookie.del('jd_main');
+                    GLOBAL.Cookie.sets('jd_main','close',getExpireTime());
+                }else if(!jd618620){
+                    GLOBAL.Cookie.del('jd_main');
+                    GLOBAL.Cookie.sets('jd_main','open',getExpireTime());
+                }
+            });
+            $(".jd_main").css('display','none');
+
+            var $this = $(this),
+                tjname = $this.attr('data-tjname'),
+                tjnameArr = tjname.split(',');
+            if(!tjname){
+                return;
+            }
+            var  scope = dhLog;
+            scope.sendActiveLog({
+                firstCtg: tjnameArr[0] || 'null',
+                secondCtg: tjnameArr[1] || 'null',
+                thirdCtg: tjnameArr[2] || 'null',
+                linkName: tjnameArr[3] || 'null',
+                linkIdx: 0,
+                linkUrl: $this.attr('href')|| $this.attr('data-url')
+            });
+        });
+    </script>
+<? } ?>
+
+
+<!--活动弹窗一/-->
+
+<body class="width-lg">
+
+
+
+<!--底部弹窗-->
+<? if( date('Ymd')>= 20170609 &&  date('Ymd')<=20170617 ){ ?>
+    <? readFilePath(SITE_DIR.'/tpl/html/footer_img.html'); //618?>
+<? } ?>
+<!--底部弹窗/-->
+
+
+
+<? if( date('Ymd')>= 20170601 &&  date('Ymd')<=20170607 ){ ?>
+    <? readFilePath(SITE_DIR.'/tpl/html/top_img.html'); //618?>
+<? } ?>
+<? if( date('Ymd')>= 20170608 &&  date('Ymd')<=20170613 ){ ?>
+    <? readFilePath(SITE_DIR.'/tpl/html/top_img2.html'); //618?>
+<? } ?>
+
+
+<div id="J_skin_panel" class="skin-panel none"></div>
+<div id="J_main_container" class="pr main-container">
+    <? if( date('Ymd')>= 20170601 &&  date('Ymd')<=20170620 ){ ?>
+        <? readFilePath(SITE_DIR.'/tpl/html/shop.html'); //618?>
+    <? } ?>
+    <!-- 头部 -->
+    <div class="dh-header dh-header_bg">
+        <div class="width1000 clearfix">
+            <div class="dh_logo fl clearfix">
+                <div class="logo fl">
+                    <a data-pos="1" data-name="logo" href="/" class="" style="background-image: url(<? rand_url($type); ?>img/<?  if(date('Ymd')==20170601){ echo 'ertongjie.png'; }else{ echo 'logo-index1202.png';}  ?>  ); background-repeat: no-repeat; background-position: left center;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src='<? rand_url($type); ?>img/<?  if(date('Ymd')==20170601){ echo 'ertongjie.png'; }else{ echo 'logo-index1202.png';}  ?>')"></a>
+                </div>
+
+                <div class="g7654-col clearfix fl">
+                    <div class="colcalendar fl">
+                        <a href="/tpl/fix.html" data-pos="2" class="zhuye index-icon" target="_blank" data-tjname="header,sethome,,">设为主页</a>
+                        <a href="http://url.7654.com" target="_blank" class="zuomian index-icon" id="lc-jingxuan J-desktop" data-url="url.7654.com" data-tjname="header,desktop,,">桌面版</a>
+                        <a href="javascript:;" class="email index-icon" id="openEmailBox" band="1"   data-tjname="header,email,,">邮箱</a>
+
+                        <div class="g7654-mail g-fc2 fl">
+                            <!-- 邮箱 -->
+                            <div class="g-bg11 g-br9 g-sd0 maillist oldmaillist none">
+                                <div class="pr email-focus">
+                                    <ul class="email-list">
+                                        <li><a data-tjname="header,email,163yx," href="http://mail.163.com/" target="_blank">@163.com</a></li>
+                                        <li><a data-tjname="header,email,126yx," href="http://www.126.com/" target="_blank">@126.com</a></li>
+                                        <li><a data-tjname="header,email,sohuyx," href="http://mail.sohu.com/" target="_blank">@sohu.com</a></li>
+                                        <li><a data-tjname="header,email,tomyx," href="http://mail.tom.com" target="_blank">@tom.com</a></li>
+                                        <li><a data-tjname="header,email,21cnyx," href="http://mail.21cn.com/" target="_blank">@21cn.com</a></li>
+                                        <li><a data-tjname="header,email,yeahyx," href="http://www.yeah.net/" target="_blank">@yeah.net</a></li>
+                                        <li><a data-tjname="header,email,139yx," href="http://mail.10086.cn/" target="_blank">@139.com</a></li>
+                                        <li><a data-tjname="header,email,qqyx," href="http://mail.qq.com/" target="_blank">@qq.com</a></li>
+                                        <li><a data-tjname="header,email,51," href="http://www.51.com/" target="_blank">51.com</a></li>
+                                        <li><a data-tjname="header,email,renren," href="http://www.renren.com/" target="_blank">人人网</a></li>
+                                        <li><a data-tjname="header,email,qqkj," href="http://qzone.qq.com/" target="_blank">QQ空间</a></li>
+                                        <li><a data-tjname="header,email,xinlanwb," href="http://weibo.com/" target="_blank">新浪微博</a></li>
+                                        <li><a data-tjname="header,email,kaixingwang," href="http://www.kaixin001.com/" target="_blank">开心网</a></li>
+                                        <li><a data-tjname="header,email,webqq," href="http://web.qq.com/" target="_blank">webqq</a></li>
+                                        <li><a data-tjname="header,email,zhifubao," href="https://www.alipay.com/" target="_blank">支付宝</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="eastplugin-weather-box" class="weather-box fl"><span style="color: #a5a5a5;height: 64px;line-height: 64px;font-size: 12px;">加载中...</span></div>
+                    <div class="g7654-star"></div>
+                </div>
+
+            </div>
+            <div class="partner4_bd" id="partner4_bd"></div>
+        </div>
+    </div>
+
+    <div id="J_dh_search" class="dh-search">
+
+        <div class="width1000 clearfix">
+
+            <ul id="J_sear_nav_list" class="search-nav-list clearfix] " >
+                <li class="fl active"><a id="search_web" class="hasbdtn-link" data-pos="1" data-tjname="search,search_top,null,web" data-target="web" data-cls="web-baidu" href="https://www.baidu.com/index.php?tn=95969128_hao_pg" data-btn="百度搜索" data-title="去百度搜索" target="_blank">网页</a></li>
+                <li class="fl"><a class="hasbdtn-link" data-pos="2" data-tjname="search,search_top,null,news" data-target="news" data-cls="web-baidu" href="http://news.baidu.com/?tn=95969128_hao_pg" data-title="去百度新闻" data-btn="百度新闻" target="_blank">新闻</a></li>
+                <li class="fl"><a class="hasbdtn-link" data-pos="3" data-tjname="search,search_top,null,video" data-tjname="search,search_top,null,video" data-target="video" data-cls="web-baidu" href="http://v.baidu.com/?tn=95969128_hao_pg" data-btn="百度视频" data-title="去百度视频" target="_blank">视频</a></li>
+                <li class="fl"><a class="hasbdtn-link" data-pos="4" data-tjname="search,search_top,null,image" data-target="image" data-cls="web-baidu" href="http://image.baidu.com/?tn=95969128_hao_pg" data-title="去百度图片" data-btn="百度图片" target="_blank">图片</a></li>
+                <li class="fl"><a class="hasbdtn-link" data-pos="5" data-tjname="search,search_top,null,music" data-target="music" data-cls="web-baidu" href="http://music.baidu.com/?tn=95969128_hao_pg" data-title="去百度音乐" data-btn="百度音乐" target="_blank">音乐</a></li>
+                <li class="fl"><a class="hasbdtn-link" data-pos="6" data-tjname="search,search_top,null,map" data-target="map" data-cls="web-baidu" href="http://map.baidu.com/?tn=95969128_hao_pg" data-title="去百度地图" data-btn="百度地图" target="_blank">地图</a></li>
+                <li class="fl"><a class="hasbdtn-link" data-pos="7" data-tjname="search,search_top,null,ask" data-target="ask" data-cls="web-baidu" href="http://zhidao.baidu.com/?tn=95969128_hao_pg" data-title="去百度知道" data-btn="百度问答" target="_blank">问答</a></li>
+                <li class="fl"><a class="hasbdtn-link" data-pos="8" data-tjname="search,search_top,null,tieba" data-target="tieba" data-cls="web-baidu" href="http://tieba.baidu.com/?tn=95969128_hao_pg" data-title="去百度贴吧" data-btn="百度贴吧" target="_blank">贴吧</a></li>
+                <li class="fl"><a class="hasbdtn-link" data-pos="9" data-tjname="search,search_top,null,shopping" data-target="shopping" data-cls="web-taobao" href="https://ai.taobao.com/search/index.htm?pid=mm_111978447_15128744_59500486&commend=all" data-btn="淘宝" data-title="去淘宝" target="_blank">购物</a></li>
+            </ul>
+
+            <div class="search-form-wrap clearfix">
+                <div class="J-search-logo-wrap fl pr search-logo-wrap">
+                    <div class="search-logo">
+                        <a id="J_search_logo" data-pos="1" data-tjname="search,search_left,head,search_platform" class="hasbdtn-link web-baidu fix-png" href="https://www.baidu.com/index.php?tn=95969128_hao_pg" target="_blank" title="去百度">百度</a>
+                        <i id="J_search_logo_chev" class="chev none"></i>
+                    </div>
+<!--                    <div id="J_search_logo_foot" class="search-logo-foot">-->
+<!--                        <div class="logo-list none" data-type="web" data-text="网页">-->
+<!--                            <a data-pos="1" data-tjname="search,search_left,foot_web,baidu" data-cls="web-baidu" class="hasbdtn-link web-baidu" href="https://www.baidu.com/index.php?tn=95969128_hao_pg" data-title="去百度搜索">百度</a>-->
+<!--                        </div>-->
+<!--                        <div class="logo-list none" data-type="news" data-text="新闻">-->
+<!--                            <a data-pos="1" data-tjname="search,search_left,foot_news,baidu" data-cls="news-baidu" class="hasbdtn-link web-baidu" href="http://news.baidu.com/?tn=95969128_hao_pg" data-title="去百度新闻">百度</a>-->
+<!--                        </div>-->
+<!--                        <div class="logo-list none" data-type="video" data-text="视频">-->
+<!--                            <a data-pos="1" data-tjname="search,search_left,foot_video,baidu" data-cls="video-baidu" class="hasbdtn-link web-baidu" href="http://v.baidu.com/?tn=95969128_hao_pg" data-title="去百度视频">百度</a>-->
+<!--                        </div>-->
+<!--                        <div class="logo-list none" data-type="image" data-text="图片">-->
+<!--                            <a data-pos="1" data-tjname="search,search_left,foot_image,baidu" data-cls="image-baidu" class="hasbdtn-link web-baidu" href="http://image.baidu.com/?tn=95969128_hao_pg" data-title="去百度图片">百度</a>-->
+<!--                        </div>-->
+<!--                        <div class="logo-list none" data-type="music" data-text="音乐">-->
+<!--                            <a data-pos="1" data-tjname="search,search_left,foot_music,baidu" data-cls="music-baidu" class="hasbdtn-link web-baidu" href="http://music.baidu.com/?tn=95969128_hao_pg" data-title="去百度音乐">百度</a>-->
+<!--                        </div>-->
+<!--                        <div class="logo-list none" data-type="map" data-text="地图">-->
+<!--                            <a data-pos="1" data-tjname="search,search_left,foot_map,baidu" data-cls="map-baidu" class="hasbdtn-link web-baidu" href="http://map.baidu.com/?tn=95969128_hao_pg" data-title="去百度地图">百度</a>-->
+<!--                        </div>-->
+<!--                        <div class="logo-list none" data-type="ask" data-text="问答">-->
+<!--                            <a data-pos="1" data-tjname="search,search_left,foot_ask,baidu" data-cls="ask-baidu" class="hasbdtn-link web-baidu" href="http://zhidao.baidu.com/?tn=95969128_hao_pg" data-title="去百度知道">百度</a>-->
+<!--                        </div>-->
+<!--                        <div class="logo-list none" data-type="shopping" data-text="购物">-->
+<!--                            <a data-pos="1" data-tjname="search,search_left,foot_shopping,taobao" data-cls="shopping-taobao" class="web-taobao" href="https://ai.taobao.com?pid=mm_111978447_15128744_58592490" data-title="去淘宝">淘宝网</a>-->
+<!--                        </div>-->
+<!--                        <div class="logo-list none" data-type="tieba" data-text="贴吧">-->
+<!--                            <a data-pos="1" data-tjname="search,search_left,foot_tieba,baidu" data-cls="tieba-baidu" class="hasbdtn-link web-baidu" href="http://tieba.baidu.com/?tn=95969128_hao_pg" data-title="去百度贴吧">百度</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+                <div class="fl form">
+                    <form id="J_search_form" action="https://www.baidu.com/s?tn=95969128_hao_pg" target="_blank" method="get" class="" data-thirdCtg="search_default">
+                        <div class="J_search_form-con clearfix">
+                            <div class="fl search-input-wrap">
+                                <span id="J_search_hide">
+                                    <input type="hidden" class="hasbdtn-input" name="tn" value="95969128_hao_pg">
+                                    <input type="hidden" name="ie" value="utf-8">
+                                </span>
+                                <input id="J_search_input" class="c999" name="wd" type="text" baiduSug="1" value="" placeholder=''/>
+                                <a id="J_hotword" data-tjname="search,search_center,hotnum" href="javascript:;" class="hotword"><span class="num">5</span></a>
+                                <div id="J_suggest_search" class="suggest-search">
+                                    <ul class="suggest-list" id="suggestDefault" style="height: auto;">
+                                        <? $__count = 0; foreach ( $hot_word_s as  $item_s ): ?>
+                                            <li class="suggest-item item-hook">
+                                                <a data-pos="<?=$__count+1?>" class="hasbdtn-link" data-tjname="search,search_dropdown,baidu,link<?=$__count+1?>" href="<?=$item_s['url']?>"target="_blank"><span class="hot-icon <? if($__count<=4):?>hot-icon-light<? else:?> hot-icon-dark<? endif;?>"><?=$__count+1?></span><span class="hot_text"><?=$item_s['name']?></span><? if ($__count<= 4): ?><span class="hot-icon-new">新</span><? endif;?></a>
+                                            </li>
+                                            <? $__count++; endforeach; ?>
+                                    </ul>
+                                    <ul class="suggest-list none" id="suggestShopping" style="height: auto;">
+                                        <? $__count = 0; foreach ( $hot_word_taobao_tb as  $item_tb ): ?>
+                                            <li class="suggest-item item-hook"><a data-pos="<?=$__count+1?>" data-tjname="search,search_dropdown,taobao,link<?=$__count+1?>" href="<?=$item_tb['url']?>" target="_blank"><span class="hot-icon <? if($__count<=4):?>hot-icon-light<? else:?> hot-icon-dark<? endif;?>"><?=$__count+1?></span><span class="hot_text"><?=$item_tb['name']?></span><? if ($__count<= 4): ?><span class="hot-icon-new">新</span><? endif;?></a></li>
+                                            <? $__count++; endforeach; ?>
+                                    </ul>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="fl search-btn-wrap">
+                                <i class="J_search_submit_btn_s"></i>
+                                <input id="J_search_submit_btn" type="submit" value="百度搜索"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="J_search_right" class="fl ml15 keywords" style="position: relative;">
+
+                    <? if( date('Ymd')>= 20170614 &&  date('Ymd')<=20170620 ){ ?>
+                        <? readFilePath(SITE_DIR.'/tpl/html/J_search_right.html'); //618?>
+                    <? }else{ ?>
+                        <div id="sp">
+                            <? $__count = 0; foreach ( $hot_word as  $item ): ?>
+                                <p><a data-pos="<?=$__count+1?>" data-tjname="search,search_right,baidu,link<?=$__count+1?>" target="_blank" href="<?=$item['url']; ?>"><?=$item['title']; ?></a>&nbsp&nbsp</p>
+                                <? $__count++; endforeach; ?>
+                        </div>
+                    <? } ?>
+
+                </div>
+            </div>
+            <ul class="search-result-list">
+            </ul>
+            <div id="J_search_bottom" class="hotBox-center">
+                <div class="hotBox ml20" id="hotBoxDefault">
+                    <? $len=count($hot_word_rs);$__count = 1; foreach ( $hot_word_rs as  $k=>$item ): ?>
+                        <?if($__count%6==1){?>
+                            <ul class="clearfix"><?}
+                        ?>
+                        <li class="text">
+                            <a data-pos="<?=$__count?>" data-tjname="search,search_bottom,baidu,link<?=$__count?>" target="_blank" href="<?=$item['url']; ?>" class="hasbdtn-link <? if(in_array($__count,[3,21])):?>clred<? endif; ?>" title="<?=$item['name']; ?>"><?=$item['name']; ?>
+                                <?php   if($item['show_type'] ==3 ): ?>
+                                    <img alt="" src="/tpl/img/new.png" style="display:inline-block;width:13px;height:15px;margin-top:-8px">
+                                <?php endif;?>
+                                <?php   if($item['show_type'] ==2 ): ?>
+                                    <img alt="" src="/tpl/img/hot.png" style="display:inline-block;width:13px;height:15px;margin-top:-8px">
+                                <?php endif;?>
+                            </a>
+                        </li>
+
+                        <?if($__count%6==0&&$__count!=$len){?>
+                            </ul>
+                        <?}else if($__count==$len){?>
+                            </ul>
+                        <?}?>
+
+                        <? $__count++; endforeach; ?>
+                </div>
+                <a href="javascript:;" data-tjname="search,search_bottom,update_hot_word,null" class="hotword-switch" onselectstart="return false" style="-moz-user-select:none;"></a>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- tmall bg end -->
+    <!-- body -->
+    <div class="index_nav">
+        <ul class="nav_ul clearfix" id="tab">
+            <li class="on" data-target="index_con"><a href="/" target="_blank"  data-tjname="tb_nav,index,,">首页</a></li>
+            <li data-target="xiaohua_con"><a href="xiaohua.html" target="_blank" data-tjname="tb_nav,joke,,">轻松一刻</a></li>
+            <!--          <li data-target="youhui_con"><a href="youhui.html" target="_blank" data-tjname="tb_nav,gouwu,,">优惠情报站</a></li>   -->
+            <?foreach($tab as $item): ?>
+                <?php if($item['show_type'] == 2 ){?>
+                    <li class="kellegurl">
+                        <a class="<?=$item['url']?>" data-tjname="<?=$item['link_name']?>"  target="_blank" href="javascript:;" ><span><?=$item['title']?></span>
+                            <? if($item['is_strong'] == 1 ):?>
+                                <span class="news"></span>
+                            <? endif?>
+                            <? if($item['url_image1']):?>
+                                <img data-tjname="<?=$item['link_name1']?>"  href="<?=$item['url']?>" src="<?=$item['url_image1']?>" style="display:none;width:140px ;height:70px;margin-left:6px;border-radius: 18px;overflow: hidden;z-index:100;">
+                            <? endif?>
+                        </a></li>
+                <?php }else {?>
+                    <li><a href="<?=$item['url']?>" target="_blank" data-tjname="<?=$item['link_name']?>" style=""><span><?=$item['title']?></span>
+                            <? if($item['is_strong'] == 1 ):?>
+                                <span class="news"></span>
+                            <? endif?>
+                            <? if($item['url_image1']):?>
+                                <img data-tjname="<?=$item['link_name1']?>"  href="<?=$item['url']?>" src="<?=$item['url_image1']?>" style="display:none;width:140px ;height:70px;margin-left:6px;border-radius: 18px;overflow: hidden;z-index:100;">
+                            <? endif?>
+                        </a>
+                    </li>
+                <?php }?>
+            <? endforeach;?>
+        </ul>
+    </div>
+
+
+    <!-- 头部 -->
+
+    <div class="dh-body-wrap index_con">
+        <div id="J_dh_body" class="dh-body w1000 clearfix">
+            <!-- 左侧 start -->
+            <div class="body-side fl">
+                <div class="partner220171026 zg-carousel-wrap">
+                    <ul class="J-zg-carousel-list zg-carousel-list" id="imgAd-leftTop">
+                        <? if($leftImg){ ?>
+                            <? $__count = 1;foreach($leftImg as $i =>$item): ?>
+                                <li><a data-tjname="news,oglas,imglink,imglink<?=$__count?>" <?if($i<>0){?>display: none;<?}?> data-pos="<?=$__count?>" target="_blank" href="<?=$item['url']?>"><img class="" data-original="<?=$item['img']?>" src="<?=$item['img']?>" alt="" title="" width="100%" height="100%"></a></li>
+                                <? $__count++;endforeach;?>
+                        <?}else{?>
+                            <li><a data-tjname="news,oglas,imglink,imglink" data-pos="" target="_blank" href=""><img class="" data-original="/shop/2016pc/img/left_tab_guanggao.png" src="/shop/2016pc/img/left_tab_guanggao.png" alt="" title="" width="100%" height="100%"></a></li>
+                        <?}?>
+                    </ul>
+                    <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张"></a><a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张"></a>
+                </div>
+
+                <!-- 新闻区 -->
+                <div id="J_body_side_news" class="b-news">
+                    <? include_once (SITE_DIR.'/tpl/html/b_tool.php');?>
+                    <div class="b-news-1" id="J-lc-toutiao">
+                        <ul class="J-b-news-nav b-news-nav clearfix">
+                            <li class="cur" data-news="<?=$toutiao_data_9973_id?>"><a data-tjname="<?=$news_type[0]['link_name']?>" data-pos="1" data-url="<?=$news_type[0]['url']?>"  target="_blank" data-target="<?=$news_type[0]['link_name1']?>" data-index="1" href="<?=$news_type[0]['url']?>"><?=$news_type[0]['title']?><span class="line"></span></a></li>
+                            <li data-news="<?=$shehui_data_9973_id?>"><a data-tjname="<?=$news_type[1]['link_name']?>" data-pos="3" data-url="<?=$news_type[1]['url']?>" data-target="<?=$news_type[1]['link_name1']?>" target="_blank" data-index="3" href="<?=$news_type[1]['url']?>"><?=$news_type[1]['title']?><span class="line"></span></a></li>
+                            <li data-news="<?=$yule_data_9973_id?>"><a data-tjname="<?=$news_type[2]['link_name']?>" data-pos="2" data-url="<?=$news_type[2]['url']?>" data-target="<?=$news_type[2]['link_name1']?>" target="_blank" data-index="2" href="<?=$news_type[2]['url']?>"><?=$news_type[2]['title']?><span class="line"></span></a></li>
+                            <li data-news="<?=$junshi_data_9973_id?>"><a data-tjname="<?=$news_type[3]['link_name']?>" data-pos="4" data-url="<?=$news_type[3]['url']?>" data-target="<?=$news_type[3]['link_name1']?>" target="_blank" data-index="4" href="<?=$news_type[3]['url']?>"><?=$news_type[3]['title']?><span class="line"></span></a></li>
+
+                        </ul>
+                        <div class="J-news-toutiao b-news-content news1">
+                            <div class="zg-carousel-wrap">
+                                <ul class="J-zg-carousel-list zg-carousel-list">
+                                    <?
+                                    $toutiao_data_id = 0;
+                                    for($i=0;$i<4 ;$i++,$toutiao_data_id++){    ?>
+                                        <li style="<? if($i >0){?>display:none;<?}?>"><a title="<?=$toutiao_data_9973[$toutiao_data_id]['title']?>" data-tjname="news,toutiao,imglink,imglink<?=$toutiao_data_id+1?>" data-pos="<?=$toutiao_data_id+1?>" data-tag="<?=$toutiao_data_id?>" href="<?=$toutiao_data_9973[$toutiao_data_id]['url']?>" target="_blank"><img src="<?=$toutiao_data_9973[$toutiao_data_id]['img']?>" alt=""><span class="txt"><?=$toutiao_data_9973[$toutiao_data_id]['title']?></span></a></li>
+
+                                    <?  }?>
+                                </ul>
+                                <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张" data-tjname="news_prev_btn,,,"></a>
+                                <a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张" data-tjname="news_next_btn,,,"></a>
+                            </div>
+                            <div class="content-txt1">
+                                <?
+                                for($i=4;$i<13 ;$i++,$toutiao_data_id++){    ?>
+                                    <p><i></i><a class="<?if($toutiao_data_9973[$toutiao_data_id]['is_color']=='red'){echo "clorange ";} if($toutiao_data_9973[$toutiao_data_id]['is_strong']=='1'){echo " bold";}?> new_txt" title="<?=$toutiao_data_9973[$toutiao_data_id]['title']?>" data-tjname="news,toutiao,txtlink,txtlink<?=$toutiao_data_id+1?>" data-pos="<?=$toutiao_data_id+1?>" data-tag="<?=$toutiao_data_id?>" href="<?=$toutiao_data_9973[$toutiao_data_id]['url']?>" target="_blank"><?=$toutiao_data_9973[$toutiao_data_id]['title']?></a>
+                                    </p>
+                                <?  }?>
+                            </div>
+                        </div>
+
+
+                        <div class="J-news-shehui b-news-content news1 none">
+                            <div class="zg-carousel-wrap">
+                                <ul class="J-zg-carousel-list zg-carousel-list">
+                                    <?
+                                    $shehui_data_id = 0;
+                                    for($i=0;$i<4 ;$i++,$shehui_data_id++){    ?>
+                                        <li><a title="<?=$shehui_data_9973[$shehui_data_id]['title']?>" data-tjname="news,shehui,imglink,imglink<?=$shehui_data_id+1?>" data-pos="<?=$shehui_data_id+1?>" data-tag="<?=$shehui_data_id?>" href="<?=$shehui_data_9973[$shehui_data_id]['url']?>" target="_blank"><img src="<? rand_url($type); ?>img/loading.png" class="lazy1" data-original="<?=$shehui_data_9973[$shehui_data_id]['img']?>" alt=""><span class="txt"><?=$shehui_data_9973[$shehui_data_id]['title']?></span></a></li>
+                                    <?  }?>
+                                </ul>
+                                <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张" data-tjname="news_prev_btn,,,"></a>
+                                <a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张" data-tjname="news_next_btn,,,"></a>
+                            </div>
+                            <div class="content-txt1">
+                                <?
+                                for($i=4;$i<13 ;$i++,$shehui_data_id++){    ?>
+                                    <p><i></i><a class="<?if($shehui_data_9973[$shehui_data_id]['is_color']=='red'){echo "clorange ";} if($shehui_data_9973[$shehui_data_id]['is_strong']=='1'){echo " bold";}?> new_txt" title="<?=$shehui_data_9973[$shehui_data_id]['title']?>"  data-tjname="news,shehui,txtlink,txtlink<?=$shehui_data_id+1?>" data-pos="<?=$shehui_data_id+1?>" data-tag="<?=$shehui_data_id?>" href="<?=$shehui_data_9973[$shehui_data_id]['url']?>" target="_blank"><?=$shehui_data_9973[$shehui_data_id]['title']?></a></p>
+                                <?  }?>
+                            </div>
+                        </div>
+                        <div class="J-news-yule b-news-content news1 none">
+                            <div class="zg-carousel-wrap">
+                                <ul class="J-zg-carousel-list zg-carousel-list">
+                                    <?
+                                    $yule_data_id = 0;
+                                    for($i=0;$i<4 ;$i++,$yule_data_id++){    ?>
+                                        <li><a title="<?=$yule_data_9973[$yule_data_id]['title']?>" data-tjname="news,yule,imglink,imglink<?=$yule_data_id+1?>" data-pos="<?=$yule_data_id+1?>" data-tag="<?=$yule_data_id?>" href="<?=$yule_data_9973[$yule_data_id]['url']?>" target="_blank"><img src="<? rand_url($type); ?>img/loading.png" class="lazy1" data-original="<?=$yule_data_9973[$yule_data_id]['img']?>" alt=""><span class="txt"><?=$yule_data_9973[$yule_data_id]['title']?></span></a></li>
+                                    <?  }?>
+
+                                </ul>
+                                <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张" data-tjname="news_prev_btn,,,"></a>
+                                <a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张" data-tjname="news_next_btn,,,"></a>
+                            </div>
+
+
+                            <div class="content-txt1">
+                                <?
+                                for($i=4;$i<13 ;$i++,$yule_data_id++){    ?>
+                                    <p><i></i><a class="<?if($yule_data_9973[$yule_data_id]['is_color']=='red'){echo "clorange ";} if($yule_data_9973[$yule_data_id]['is_strong']=='1'){echo " bold";}?> new_txt" title="<?=$yule_data_9973[$yule_data_id]['title']?>"  data-tjname="news,yule,txtlink,txtlink<?=$yule_data_id+1?>" data-pos="<?=$yule_data_id+1?>" data-tag="<?=$yule_data_id?>" href="<?=$yule_data_9973[$yule_data_id]['url']?>" target="_blank"><?=$yule_data_9973[$yule_data_id]['title']?></a></p>
+                                <?  }?>
+
+                            </div></div>
+
+                        <div class="J-news-junshi b-news-content news1 none">
+                            <div class="zg-carousel-wrap">
+                                <ul class="J-zg-carousel-list zg-carousel-list">
+
+                                    <?
+                                    $junshi_data_id = 0;
+                                    for($i=0;$i<4 ;$i++,$junshi_data_id++){    ?>
+                                        <li><a title="<?=$junshi_data_9973[$junshi_data_id]['title']?>" data-tjname="news,junshi,imglink,imglink<?=$junshi_data_id+1?>" data-pos="<?=$junshi_data_id+1?>" data-tag="<?=$junshi_data_id?>" href="<?=$junshi_data_9973[$junshi_data_id]['url']?>" target="_blank"><img src="<? rand_url($type); ?>img/loading.png" alt="" class="lazy1" data-original="<?=$junshi_data_9973[$junshi_data_id]['img']?>"><span class="txt"><?=$junshi_data_9973[$junshi_data_id]['title']?></span></a></li>
+                                    <?  }?>
+
+                                </ul>
+                                <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张" data-tjname="news_prev_btn,,,"></a><a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张" data-tjname="news_next_btn,,,"></a>
+                            </div>
+                            <div class="content-txt1">
+
+                                <?
+                                for($i=4;$i<13 ;$i++,$junshi_data_id++){    ?>
+                                    <p><i></i><a class="<?if($junshi_data_9973[$junshi_data_id]['is_color']=='red'){echo "clorange ";} if($junshi_data_9973[$junshi_data_id]['is_strong']=='1'){echo " bold";}?> new_txt"  title="<?=$junshi_data_9973[$junshi_data_id]['title']?>"  data-tjname="news,junshi,txtlink,txtlink<?=$junshi_data_id+1?>" data-pos="<?=$junshi_data_id+1?>" data-tag="<?=$junshi_data_id?>" href="<?=$junshi_data_9973[$junshi_data_id]['url']?>" target="_blank"><?=$junshi_data_9973[$junshi_data_id]['title']?></a></p>
+                                <?  }?>
+
+
+                            </div></div>
+                    </div>
+
+                    <div class="p_block" id="p_block">
+                        <?/* readFilePath(SITE_DIR.'/tpl/html/left_bd.html');*/?>
+                    </div>
+
+
+
+                    <!-- 热播区域 -->
+                    <div class="b-news-2" id="J-lc-rebo">
+                        <code id="J_lc_video" class="none">
+                            <ul class="J-b-news-nav b-news-nav clearfix">
+                                <li class="cur"><a data-tjname="<?=$yingshi_type[0]['link_name']?>" data-pos="1" data-url="<?=$yingshi_type[0]['url']?>"  target="_blank" data-target="<?=$yingshi_type[0]['link_name1']?>" data-index="1" href="<?=$yingshi_type[0]['url']?>"><?=$yingshi_type[0]['title']?><span class="line"></span></a></li>
+                                <li><a data-tjname="<?=$yingshi_type[1]['link_name']?>" data-pos="3" data-url="<?=$yingshi_type[1]['url']?>" data-target="<?=$yingshi_type[1]['link_name1']?>" target="_blank" data-index="3" href="<?=$yingshi_type[1]['url']?>"><?=$yingshi_type[1]['title']?><span class="line"></span></a></li>
+                                <li><a data-tjname="<?=$yingshi_type[2]['link_name']?>" data-pos="2" data-url="<?=$yingshi_type[2]['url']?>" data-target="<?=$yingshi_type[2]['link_name1']?>" target="_blank" data-index="2" href="<?=$yingshi_type[2]['url']?>"><?=$yingshi_type[2]['title']?><span class="line"></span></a></li>
+                                <li><a data-tjname="<?=$yingshi_type[3]['link_name']?>" data-pos="4" data-url="<?=$yingshi_type[3]['url']?>" data-target="<?=$yingshi_type[3]['link_name1']?>" target="_blank" data-index="4" href="<?=$yingshi_type[3]['url']?>"><?=$yingshi_type[3]['title']?><span class="line"></span></a></li>
+                            </ul>
+
+
+                            <div class="J-news-rebo b-news-content news2">
+                                <div class="zg-carousel-wrap">
+                                    <ul class="J-zg-carousel-list zg-carousel-list">
+                                        <?
+                                        $tn = "95969128_hao_pg";
+
+                                        $video_data = $rebo_data;
+                                        $index = 0;
+                                        for($i=0;$i<4 ;$i++,$index++){    ?>
+                                            <li><a title="<?=$video_data[$index]['title']?>" data-tjname="left_tab,rebo,imglink,imglink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><img src="<? rand_url($type); ?>img/loading.png" class="lazy9" data-original="<?=$video_data[$index]['img']?>" alt=""><span class="txt"><?=$video_data[$index]['title']?></span></a></li>
+                                        <?  }?>
+                                    </ul>
+                                    <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张" data-tjname="news_prev_btn,,,"></a>
+                                    <a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张" data-tjname="news_next_btn,,,"></a>
+                                </div>
+                                <div class="content-txt2 clearfix">
+                                    <div class="fr">
+                                        <?
+                                        for($i=4;$i<8 ;$i++,$index++){    ?>
+                                            <p><i></i><a title="<?=$video_data[$index]['title']?>"  data-tjname="left_tab,rebo,txtlink,txtlink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><?=$video_data[$index]['title']?></a></p>
+                                        <?  }?>
+                                    </div>
+                                    <div class="fl">
+                                        <?
+                                        for($i=9;$i<13 ;$i++,$index++){    ?>
+                                            <p><i></i><a title="<?=$video_data[$index]['title']?>"  data-tjname="left_tab,rebo,txtlink,txtlink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><?=$video_data[$index]['title']?></a></p>
+                                        <?  }?>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="J-news-dianshiju b-news-content news2 none">
+                                <div class="zg-carousel-wrap">
+                                    <ul class="J-zg-carousel-list zg-carousel-list">
+                                        <?
+                                        $video_data = $dianshiju_data;
+                                        $index = 0;
+                                        for($i=0;$i<4 ;$i++,$index++){
+                                            ?>
+
+                                            <li><a title="<?=$video_data[$index]['title']?>" data-tjname="left_tab,dianshiju,imglink,imglink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><img src="<? rand_url($type); ?>img/loading.png" class="lazy9" data-original="<?=$video_data[$index]['img']?>" alt=""><span class="txt"><?=$video_data[$index]['title']?></span></a></li>
+                                        <?  }?>
+                                    </ul>
+                                    <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张" data-tjname="news_prev_btn,,,"></a>
+                                    <a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张" data-tjname="news_next_btn,,,"></a>
+                                </div>
+                                <div class="content-txt2 clearfix">
+                                    <div class="fr">
+                                        <?
+                                        for($i=4;$i<8 ;$i++,$index++){    ?>
+                                            <p><i></i><a title="<?=$video_data[$index]['title']?>"  data-tjname="left_tab,dianshiju,txtlink,txtlink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><?=$video_data[$index]['title']?></a></p>
+                                        <?  }?>
+                                    </div>
+                                    <div class="fl">
+                                        <?
+                                        for($i=9;$i<13 ;$i++,$index++){    ?>
+                                            <p><i></i><a title="<?=$video_data[$index]['title']?>"  data-tjname="left_tab,dianshiju,txtlink,txtlink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><?=$video_data[$index]['title']?></a></p>
+                                        <?  }?>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="J-news-dianying b-news-content news2 none">
+                                <div class="zg-carousel-wrap">
+                                    <ul class="J-zg-carousel-list zg-carousel-list">
+                                        <?
+                                        $video_data = $dianying_data;
+                                        $index = 0;
+                                        for($i=0;$i<4 ;$i++,$index++){
+                                            ?>
+                                            <li><a title="<?=$video_data[$index]['title']?>" data-tjname="left_tab,dianying,imglink,imglink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><img src="<? rand_url($type); ?>img/loading.png" class="lazy9" data-original="<?=$video_data[$index]['img']?>" alt=""><span class="txt"><?=$video_data[$index]['title']?></span></a></li>
+                                        <?  }?>
+                                    </ul>
+                                    <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张" data-tjname="news_prev_btn,,,"></a>
+                                    <a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张" data-tjname="news_next_btn,,,"></a>
+                                </div>
+                                <div class="content-txt2 clearfix">
+                                    <div class="fr">
+                                        <?
+                                        for($i=4;$i<8 ;$i++,$index++){    ?>
+                                            <p><i></i><a title="<?=$video_data[$index]['title']?>"  data-tjname="left_tab,dianying,txtlink,txtlink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><?=$video_data[$index]['title']?></a></p>
+                                        <?  }?>
+                                    </div>
+                                    <div class="fl">
+                                        <?
+                                        for($i=9;$i<13 ;$i++,$index++){    ?>
+                                            <p><i></i><a title="<?=$video_data[$index]['title']?>"  data-tjname="left_tab,dianying,txtlink,txtlink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><?=$video_data[$index]['title']?></a></p>
+                                        <?  }?>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="J-news-zongyi b-news-content news2 none">
+                                <div class="zg-carousel-wrap">
+                                    <ul class="J-zg-carousel-list zg-carousel-list">
+                                        <?
+                                        $video_data = $zongyi_data;
+                                        $index = 0;
+                                        for($i=0;$i<4 ;$i++,$index++){    ?>
+                                            <li><a title="<?=$video_data[$index]['title']?>" data-tjname="left_tab,zongyi,imglink,imglink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><img src="<? rand_url($type); ?>img/loading.png" class="lazy9" data-original="<?=$video_data[$index]['img']?>" alt=""><span class="txt"><?=$video_data[$index]['title']?></span></a></li>
+                                        <?  }?>
+                                    </ul>
+                                    <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张" data-tjname="news_prev_btn,,,"></a>
+                                    <a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张" data-tjname="news_next_btn,,,"></a>
+                                </div>
+                                <div class="content-txt2 clearfix">
+                                    <div class="fr">
+                                        <?
+                                        for($i=4;$i<8 ;$i++,$index++){    ?>
+                                            <p><i></i><a title="<?=$video_data[$index]['title']?>"  data-tjname="left_tab,zongyi,txtlink,txtlink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><?=$video_data[$index]['title']?></a></p>
+                                        <?  }?>
+                                    </div>
+                                    <div class="fl">
+                                        <?
+                                        for($i=9;$i<13 ;$i++,$index++){    ?>
+                                            <p><i></i><a title="<?=$video_data[$index]['title']?>"  data-tjname="left_tab,zongyi,txtlink,txtlink<?=$index+1?>" data-pos="<?=$index+1?>" data-tag="<?=$index?>" href="<?=$video_data[$index]['url']?>" target="_blank"><?=$video_data[$index]['title']?></a></p>
+                                        <?  }?>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </code>
+                    </div>
+
+                    <div id="mod_news" class="mod_news" style="margin: 10px 0 0;"></div>
+
+
+
+
+                </div>
+                <!-- /新闻区 -->
+            </div>
+            <!-- 左侧 end -->
+
+            <!-- 右侧 start-->
+            <div id="J_body" class="body fr">
+
+                <!-- 热站、名站以及自定义网址区 -->
+                <div class="b-famous-site">
+
+                    <!-- 热站导航区 -->
+                    <div class="hot-site hot_site_RecordLog clearfix">
+                        <? $hot_key = 1; foreach ($hot_site as $item):?>
+                            <span class="span">
+                                <a data-tjname="<?=$item['link_name'];?>"  data-pos="<? if(!empty($item['title1'])):?><?=$hot_key."-1";?><? else: ?><?=$hot_key;?><? endif;?>" class="<?if($item['is_strong']==1){ ?>bold <? }?><? if(!empty($item['remark']) && $item['remark'] != '0'):?><?= $item['remark'];?><? endif;?> " target="_blank" href="<?= $item['url']; ?>">
+                                <? if(!empty($item['url_image'])):?>
+                                    <img src="<?=$item['url_image']?>">
+                                <? elseif(!empty($item['spare1']) && $minilogo): ?>
+                                    <span class="icon_site" style="background: url(<?=$minilogo?>);background-position: <?=$item['spare1']?>;width: 16px;height: 16px;">&nbsp;</span>
+                                <? endif; ?>
+                                    <? if($item['show_type']!=2) echo $item['title']; ?>
+								</a>
+
+                                <? if(!empty($item['title1'])):?>
+                                    •&nbsp;<a data-tjname="<?=$item['link_name'];?>" class="<?if($item['is_strong']==1){ ?>bold <? }?>"  data-pos="<?=$hot_key."-2";?>" target="_blank"  href="<?=$item['url1']?>"><?=$item['title1']?></a><? endif; ?>
+                                <? if(!empty($item['img_last'])):?>
+                                <a data-tjname="<?=$item['link_name'];?>" class="tag <?if($item['is_strong']==1){ ?>bold <? }?>"  data-pos="<? if(!empty($item['title1'])):?><?=$hot_key."-2-1";?><? else: ?><?=$hot_key."-1";?><? endif;?>" target="_blank" href="<?=$item['img_last_url']?>"><img src="<?=$item['img_last']?>"></a><? endif; ?>
+                                <? if($item['text_status'] == 1):?>
+                            <a data-tjname="<?=$item['link_name'];?>" class="tag hoverImg <?if($item['is_strong']==1){ ?>bold <? }?>"  data-pos="<?=$hot_key."-1";?>" target="_blank" href="<?=$item['img_last_url']?>"><img src="<? rand_url($type); ?>img/hint_ball.gif"><span><?=$item['text']?></span></a><? endif; ?><!-- 鼠标移上去显示文字 -->
+                                <? if($item['text_status'] == 2):?>
+                                <a data-tjname="<?=$item['link_name'];?>" class="tag hoveredImg clearfix <?if($item['is_strong']==1){ ?>bold <? }?>"  data-pos="<?=$hot_key."-1";?>" target="_blank" href="<?=$item['img_last_url']?>"><span><?=$item['text']?></span></a><? endif; ?>
+                            </span>
+                            <? $hot_key++; endforeach; ?>
+                    </div>
+
+
+                    <?/*
+                        <!-- 名站导航区  data-original="" src="/tpl/img/loading.png" class="lazy1"-->
+                        */?>
+                    <div class="famouse-site clearfix">
+                        <? $mz_key = 1; foreach($mingzhanSiteList as $item ):?>
+                            <span class="span">
+
+                                <a data-tjname="<?=$item['link_name'];?>" data-pos="<? if(!empty($item['title1'])):?><?=$mz_key."-1";?><? else: ?><?=$mz_key;?><? endif;?>" class="<?if($item['is_strong']==1){ ?>bold <? }?> <? if(!empty($item['remark']) && $item['remark'] != '0'):?><?= $item['remark'];?><? endif;?> " target="_blank" href="<?= $item['url']; ?>">
+                                 <? if(!empty($item['url_image'])):?>
+                                     <img src="<?=$item['url_image']?>">
+                                 <? elseif(!empty($item['spare1']) && $minilogo): ?>
+                                     <span class="icon_site" style="background: url(<?=$minilogo?>);background-position: <?=$item['spare1']?>;width: 16px;height: 16px;">&nbsp;</span>
+                                 <? endif; ?>
+                                    <? if($item['show_type']!=2) echo $item['title']; ?>
+                                </a>
+                                <? if(!empty($item['title1'])):?>
+                                    •&nbsp;<a data-tjname="<?=$item['link_name'];?>" class="<?if($item['is_strong']==1){ ?>bold <? }?>"  data-pos="<?=$mz_key."-2";?>" target="_blank" href="<?=$item['url1']?>"><?=$item['title1']?></a><? endif; ?>
+                                <? if(!empty($item['img_last'])):?>
+                                <a data-tjname="<?=$item['link_name'];?>" class="tag <?if($item['is_strong']==1){ ?>bold <? }?>"  data-pos="<? if(!empty($item['title1'])):?><?=$mz_key."-2-1";?><? else: ?><?=$mz_key."-1";?><? endif;?>" target="_blank" href="<?=$item['img_last_url']?>"><img src="<?=$item['img_last']?>"></a><? endif; ?>
+                                <? if($item['text_status'] == 1):?>
+                            <a data-tjname="<?=$item['link_name'];?>"  data-pos="<?=$mz_key."-1";?>" target="_blank" href="<?=$item['img_last_url']?>" class="tag hoverImg <?if($item['is_strong']==1){ ?>bold <? }?>"><img src="<? rand_url($type); ?>img/hint_ball.gif"><span><?=$item['text']?></span></a><? endif; ?><!-- 鼠标移上去显示文字 -->
+                                <? if($item['text_status'] == 2):?>
+                                <a data-tjname="<?=$item['link_name'];?>" class="tag hoveredImg clearfix <?if($item['is_strong']==1){ ?>bold <? }?>"  data-pos="<?=$mz_key."-1";?>" target="_blank" href="<?=$item['img_last_url']?>"><span><?=$item['text']?></span></a><? endif; ?>
+                            </span>
+                            <? $mz_key++; endforeach; ?>
+                    </div>
+
+                    <div class="famouse-site2" style="width:100%;height:30px;height:30px;position: relative;overflow: hidden;margin-top:-10px;padding-bottom:10px;">
+
+                        <div id="rz-gg-f" style="width:100%;height:32px;line-height:30px;padding-left:10px;">
+                            <span class="span"><a data-tjname="famouse_site,fake,biantai,," data-pos="0" class="" target="_blank" href="http://news.df9377.com/16906/">变态传奇</a></span>
+                            <span class="span"><a data-tjname="famouse_site,fake,shucheng,," data-pos="1" class="" target="_blank" href="http://www.cread.com/?cid=6015">中文书城</a></span>
+                            <span class="span"><a data-tjname="famouse_site,fake,9kuai9,," data-pos="2" class="" target="_blank" href="http://temai.egou.com/?chn=t-9973&hmsr=t-9973">9块9包邮</a></span>
+                            <span class="span"><a data-tjname="famouse_site,fake,tianmaonz,," data-pos="3" class="" target="_blank" href="https://c.duomai.com/track.php?site_id=215238&aid=3534&euid=jdbt&t=https%3A%2F%2Fjrunion.jd.com%2Fc%2F%3Fpu%3DqB7ySYygO16d4882sd1SLRIwliQPYWBSnNXHyBvWM0eVY%252BnkGBjHJlN%252BMKHr8ULeoJWdsgCi0U2sA1BxvwBvFz9nNx55lfXcSdftih%252BXfpy5NZPL%252F%252F%252Bau7U86YU33B25hWv4AL8JOoc%253D">京东金融</a></span>
+                            <span class="span"><a data-tjname="famouse_site,fake,tianmaonz,," data-pos="4" class="" target="_blank" href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dv5DBbleVhEkcQipKwQzePCperVdZeJvipRe%2F8jaAHci5VBFTL4hn2dB0WgwvrmxJJhSgLssdd1YwpI2%2FDXCoT0TwdIFkkWTDBmiZEqYrokLGhnHauIpRm4z6G0fvVpfq2VgoYMksvLfyV%2BtA%2BIY3LST8IooNW8SzyELuT3V6aIyiZ%2BQMlGz6FQ%3D%3D">天猫女装</a></span>
+                            <span class="span"><a data-tjname="famouse_site,fake,kaixinb,," data-pos="5" class="" target="_blank" href="https://c.duomai.com/track.php?site_id=215238&aid=1359&euid=kxb&t=http%3A%2F%2Fwww.kaixinbao.com%2F">开心保</a></span>
+                        </div>
+
+                        <div id="rz-gg" style="width:100%;height:33px;line-height:30px;">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="b-gg" id="b-gg">
+                    <? readFilePath(SITE_DIR.'/tpl/html/bd_gg.html');?>
+                </div>
+                <!-- 猜你喜欢 -->
+                <div id="ggContainer">
+                    <? readFilePath(SITE_DIR.'/tpl/html/2345.html');?>
+                </div>
+
+
+                <div class="dh_news2 clearfix">
+                    <div class="left fl clearfix">
+                        <div class="zg-carousel-wrap fl">
+                            <ul class="J-zg-carousel-list zg-carousel-list" id="dh_news2_left">
+                                <li><a href="<?=$yule2_data[0]['url']?>" class="left_l" target="_blank" data-tjname="news,center,imglink,imglink1"><img src="<?=$yule2_data[0]['img']?>" title="<?=$yule2_data[0]['title']?>"><span class="txt"><?=$yule2_data[0]['title']?></span></a></li>
+                                <li style="display: none;"><a href="<?=$yule2_data[1]['url']?>"  class="left_l" target="_blank" data-tjname="news,center,imglink,imglink2"><img src="<?=$yule2_data[1]['img']?>" title="<?=$yule2_data[1]['title']?>"><span class="txt"><?=$yule2_data[1]['title']?></span></a></li>
+                                <li style="display: none;"><a href="<?=$yule2_data[2]['url']?>"  class="left_l" target="_blank" data-tjname="news,center,imglink,imglink3"><img src="<?=$yule2_data[2]['img']?>" title="<?=$yule2_data[2]['title']?>"><span class="txt"><?=$yule2_data[2]['title']?></span></a></li>
+                                <li style="display: none;"><a href="<?=$yule2_data[3]['url']?>"  class="left_l" target="_blank" data-tjname="news,center,imglink,imglink4"><img src="<?=$yule2_data[3]['img']?>" title="<?=$yule2_data[3]['title']?>"><span class="txt"><?=$yule2_data[3]['title']?></span></a></li>
+                            </ul>
+                            <a href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一张" data-tjname="news,center,prev,"></a>
+                            <a href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一张" data-tjname="news,center,next,"></a>
+                        </div>
+                    </div>
+                    <div class="right fr">
+                        <ul class="right_f fl">
+                            <li><i></i><a href="<?=$yule2_data[4]['url']?>" class="bold ft16" target="_blank" data-tjname="news,center,txtlink,txtlink1"><?=$yule2_data[4]['title']?></a></li>
+                            <li><i></i><a href="<?=$yule2_data[5]['url']?>" target="_blank" data-tjname="news,center,txtlink,txtlink2"><?=$yule2_data[5]['title']?></a></li>
+                            <li><i></i><a href="<?=$yule2_data[6]['url']?>" target="_blank" data-tjname="news,center,txtlink,txtlink3"><?=$yule2_data[6]['title']?></a></li>
+                            <li class="f_last"><i></i><a href="<?=$yule2_data[7]['url']?>" target="_blank" data-tjname="news,center,txtlink,txtlink4"><?=$yule2_data[7]['title']?></a></li>
+
+                            <li><i></i><a href="<?=$yule2_data[8]['url']?>" target="_blank" class="bold cOrange" data-tjname="news,center,txtlink,txtlink5"><?=$yule2_data[8]['title']?></a></li>
+                            <li><i></i><a href="<?=$yule2_data[9]['url']?>" target="_blank" data-tjname="news,center,txtlink,txtlink6"><?=$yule2_data[9]['title']?></a></li>
+                            <li><i></i><a href="<?=$yule2_data[10]['url']?>" target="_blank" data-tjname="news,center,txtlink,txtlink7"><?=$yule2_data[10]['title']?></a></li>
+                            <li><i></i><a href="<?=$yule2_data[11]['url']?>" target="_blank" data-tjname="news,center,txtlink,txtlink8"><?=$yule2_data[11]['title']?></a></li>
+                        </ul>
+                        <ul class="right_r fr">
+                            <li><a href="<?=$yule2_data[12]['url']?>" target="_blank" data-tjname="news,center,imglink,imglink5"><img src="<?=$yule2_data[12]['img']?>" title="<?=$yule2_data[12]['title']?>"><span><?=$yule2_data[12]['title']?></span></a></li>
+                            <li><a href="<?=$yule2_data[13]['url']?>" target="_blank" data-tjname="news,center,imglink,imglink6"><img src="<?=$yule2_data[13]['img']?>" title="<?=$yule2_data[13]['title']?>"><span><?=$yule2_data[13]['title']?></span></a></li>
+                            <li><a href="<?=$yule2_data[14]['url']?>" target="_blank" data-tjname="news,center,imglink,imglink7"><img src="<?=$yule2_data[14]['img']?>" title="<?=$yule2_data[14]['title']?>"><span><?=$yule2_data[14]['title']?></span></a></li>
+                            <li><a href="<?=$yule2_data[15]['url']?>" target="_blank" data-tjname="news,center,imglink,imglink8"><img src="<?=$yule2_data[15]['img']?>" title="<?=$yule2_data[15]['title']?>"><span><?=$yule2_data[15]['title']?></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="b-cool-site">
+                    <div class="cool-site-content">
+                        <div class="section-cool-site">
+                            <ul>
+                                <li class="cool-site-bar">
+                                    <? $__count = 1;foreach($coolSiteListHear[1] as $item): ?>
+                                        <? if($__count>1):?>-<? endif; ?><a data-tjname="cool_site,,,<?=$item['link_name']?>" data-name="<?=$item['link_name']?>" data-pos="<?=$__count?>" data-tag="" href="<?=$item['url']?>" target="_blank"><?=$item['title']?></a>
+                                        <? $__count++; endforeach;?>
+                                </li>
+                                <? $__count = 1;foreach($coolSiteList1 as $item): ?>
+                                    <li class="cool-site-item">
+                                        <? $__count_detail = 0;foreach($item as $detail): ?>
+                                            <? if($__count_detail==0):?>
+                                                <h4 class="fl"><a data-tjname="<?=$detail['link_name']?>" target="_blank" href="<?=$detail['url']?>"><?=$detail['title']?></a></h4>
+                                                <span class="fr more" width="60"><a data-tjname="<?=$detail['link_name']?>_more" class="g_more g_gray-red" target="_blank" href="<?=$detail['url']?>">更多&gt;&gt;</a></span>
+                                            <? else: ?>
+                                                <span><a data-tjname="<?=$detail['link_name']?>" data-pos="<?=$__count_detail?>" target="_blank" class="<? if($detail['remark']==1):?>clred<? endif;?>" href="<?=$detail['url']?>"><?=$detail['title']?></a></span>
+                                            <? endif; ?>
+                                            <? $__count_detail++; endforeach;?>
+                                    </li>
+                                    <? $__count++; endforeach;?>
+                            </ul>
+                        </div>
+                        <div class="section-cool-site">
+                            <ul>
+                                <li class="cool-site-bar">
+                                    <? $__count = 1;foreach($coolSiteListHear[2] as $item): ?>
+                                        <? if($__count>1):?>-<? endif; ?><a data-tjname="cool_site,,," data-name="<?=$item['link_name']?>" data-pos="<?=$__count+8?>" data-tag="" href="<?=$item['url']?>" target="_blank"><?=$item['title']?></a>
+                                        <? $__count++; endforeach;?>
+                                </li>
+                                <? $__count = 1;foreach($coolSiteList2 as $item): ?>
+                                    <li class="cool-site-item">
+                                        <? $__count_detail = 0;foreach($item as $detail): ?>
+                                            <? if($__count_detail==0):?>
+                                                <h4 class="fl"><a data-tjname="<?=$detail['link_name']?>" target="_blank" href="<?=$detail['url']?>"><?=$detail['title']?></a></h4>
+                                                <span class="fr more" width="60"><a data-tjname="<?=$detail['link_name']?>_more" class="g_more g_gray-red" target="_blank" href="<?=$detail['url']?>">更多&gt;&gt;</a></span>
+                                            <? else: ?>
+                                                <span><a data-tjname="<?=$detail['link_name']?>" data-pos="<?=$__count_detail?>" target="_blank" class="<? if($detail['remark']==1):?>clred<? endif;?>" href="<?=$detail['url']?>"><?=$detail['title']?></a></span>
+                                            <? endif; ?>
+                                            <? $__count_detail++; endforeach;?>
+                                    </li>
+                                    <? $__count++; endforeach;?>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="partner4_center" id="partner4_center" style="_margin-left:7px;*margin-left:7px;"></div>
+                <!-- 笑话 -->
+                <div class="b-happy-img">
+
+                    <code id="b_happy_img" class="none">
+                        <div class="b-happy-tab J-section-nav">
+                            <a target="_blank" data-tjname="news_tab,xiaohua,null,null" data-pos="2" href="javascript:;" data-target="b-happy-xiaohua" class="tab tab-active">笑话<span class="line"></span></a>
+                            <? /*  <a target="_blank" data-tjname="news_tab,bagua,null,null" data-pos="1" href="javascript:;" data-target="b-happy-video" class="tab">八卦<span class="line"></span></a>  */?>
+                        </div>
+                        <div class="b-happy-con">
+                            <div class="section-b b-happy-xiaohua section-b-happy pr">
+                                <div class="B-happy-tab-1 clearfix">
+
+                                    <ul class="J-zg-carousel-list zg-carousel-list">
+
+                                        <?
+                                        //$licount = floor(count($xiaohua_data)/8);
+                                        $licount = 1;
+                                        for($i=0;$i<$licount;$i++){ ?>
+                                            <li class="clearfix" style=" <?if($i<>0){?>display: none;<?}?>">
+                                                <?php
+                                                $divdata = array_slice($xiaohua_data, $i*8,8);
+                                                foreach ($divdata as $k=>$v){
+                                                    ?>
+                                                    <div class="fl vt info">
+                                                        <a data-tjname="news,xiaohua,imglink,imglink<?=($i*8+$k)?>" data-pos="<?=($i*8+$k)?>" href="<?= $v['url']?>" target="_blank">
+                                <span class="img">
+
+                                  <img src="<? rand_url($type); ?>img/loading.png" class="lazy8" data-original="<?= $v['img']?>">
+
+
+                                </span>
+                                                            <span class="txt"><?= $v['title']?></span>
+                                                        </a>
+                                                    </div>
+                                                <?php   } ?>
+                                            </li>
+                                        <? } ?>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </code>
+                </div>
+            </div>
+            <?/* 右侧 end */?>
+
+
+        </div>
+
+        <div class="section-wrap">
+            <a id="J-lc-game" name="sectionGame"></a>
+            <div class="section-game">
+                <code id="J-lc-game_con" class="none">
+                    <div class="w1000">
+                        <div class="section">
+
+                            <div class="J-section-nav section-h clearfix">
+                                <div class="fr sub-title">
+                                </div>
+                                <h4 class="fl title"><a target="_blank" href="http://game.7654.com/" class="icon i-game" data-tjname="game,,,">玩游戏</a></h4>
+                                <a target="_blank" href="http://news.df9377.com/16906/" class="tab tab-active" data-tjname="game,remen,,"  data-target="J-game-remen">热门游戏<span class="line"></span></a>
+                                <a target="_blank" href="http://youxi.baidu.com?tn=95969128_hao_pg" class="tab" data-tjname="game,wangye,," data-target="J-game-wangye">火爆游戏<span class="line"></span></a>
+                                <a target="_blank" href="http://9973.9669.cn/" class="tab" data-tjname="game,xiaoyouxi,," data-target="J-game-minigame">小游戏<span class="line"></span></a>
+                            </div>
+
+                            <div class="section-b section-b-game pr clearfix ov">
+
+                                <div class="J-game-remen remen  sectionW" style="width:100%;padding: 0px;">
+
+
+                                </div>
+
+                                <div class="J-game-wangye wangye none sectionW">
+                                        <div class="gl_game_main">
+
+                                            <div class="gl_lft" id="">
+                                                <div class="gl_lft_1">
+                                                    <a href="http://p.ynb2dca.com/s/1/1222/63091.html?uid=912757&" data-tjname="game,remen,imglink,," data-pos="0"  target="_blank">   <img src="/tpl/img/dataimg/W_01.png" class="gl_lft_1_pic"/>
+                                                        <div class="gl_ls_bj"> </div>
+                                                        <div class="gl_title">小伙沉迷游戏，娇妻在一旁做出大尺度动作</div></a>
+
+                                                </div>
+
+                                                <div class="gl_min_sp">
+                                                    <div class="gl_img_space">
+                                                        <a href="http://p.ynb2dca.com/s/1/1222/63090.html?uid=912757&"  data-tjname="game,remen,imglink,," data-pos="1" target="_blank">    <img src="/tpl/img/dataimg/W_02.png" class="gl_img_s">
+                                                            <div class="gl_ls_bj_2"></div>
+                                                            <div class="gl_title_2">传奇第一女战士  霸气归来</div></a>
+                                                    </div>
+
+                                                    <div class="gl_img_space">
+                                                        <a href="http://p.ynb2dca.com/s/1/1222/63087.html?uid=912757&" data-tjname="game,remen,imglink,," data-pos="2" target="_blank">     <img src="/tpl/img/dataimg/W_03.png" class="gl_img_s">
+                                                            <div class="gl_ls_bj_2"></div>
+                                                            <div class="gl_title_2">女玩家太多 诚招男玩家</div></a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="gl_min_sp">
+                                                    <div class="gl_img_space">
+                                                        <a href="http://p.ynb2dca.com/s/1/1222/63091.html?uid=912757" data-tjname="game,remen,imglink,," data-pos="3" target="_blank">    <img src="/tpl/img/dataimg/W_04.png" class="gl_img_s">
+                                                            <div class="gl_ls_bj_2"></div>
+                                                            <div class="gl_title_2">女性私服 私密通道限时开放</div></a>
+                                                    </div>
+                                                    <div class="gl_img_space">
+                                                        <a href="http://p.ynb2dca.com/s/1/1222/63090.html?uid=912757&" data-tjname="game,remen,imglink,," data-pos="4" target="_blank">  <img src="/tpl/img/dataimg/W_05.png" class="gl_img_s">
+                                                            <div class="gl_ls_bj_2"></div>
+                                                            <div class="gl_title_2">新版传奇爆率超高</div></a>
+                                                    </div>
+
+                                                </div>
+                                                <div class="gl_min_sp" style="margin-right: 0;">
+                                                    <div class="gl_img_space">
+                                                        <a href="http://p.ynb2dca.com/s/1/1222/63090.html?uid=912757&" data-tjname="game,remen,imglink,," data-pos="5" target="_blank">     <img src="/tpl/img/dataimg/W_06.png" class="gl_img_s">
+                                                            <div class="gl_ls_bj_2"></div>
+                                                            <div class="gl_title_2">一款能够双修的游戏</div></a>
+                                                    </div>
+                                                    <div class="gl_img_space">
+                                                        <a href="http://p.ynb2dca.com/s/1/1222/63091.html?uid=912757" data-tjname="game,remen,imglink,," data-pos="6" target="_blank">    <img src="/tpl/img/dataimg/W_07.png" class="gl_img_s">
+                                                            <div class="gl_ls_bj_2"></div>
+                                                            <div class="gl_title_2">美女和游戏好友玩直播</div></a>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="gl_rg">
+                                                <ul>
+                                                    <li><em class="gadd_1">1</em><a data-tjname="game,remen,txtlink,," data-pos="0" href="http://p.ynb2dca.com/s/1/1222/63091.html?uid=912757" target="_blank">真实游戏 已婚勿入</a></li>
+                                                    <li><em class="gadd_2">2</em><a data-tjname="game,remen,txtlink,," data-pos="1" href="http://p.ynb2dca.com/s/1/1222/63090.html?uid=912757&" target="_blank">曝女学生私密生活</a></li>
+                                                    <li><em class="gadd_3">3</em><a data-tjname="game,remen,txtlink,," data-pos="2" href="http://p.ynb2dca.com/s/1/1222/63087.html?uid=912757&" target="_blank">真实体验 请勿沉迷</a></li>
+                                                    <li><em>4</em><a data-tjname="game,remen,txtlink,," data-pos="3" href="http://tg.dswef.com/lycq/39/index.html?uid=76546&suid=76546-1" target="_blank">未满18勿玩此游戏</a></li>
+                                                    <li><em>5</em><a data-tjname="game,remen,txtlink,," data-pos="4" href="http://tg.dswef.com/dzs/8/index.html?uid=76546&suid=76546-12" target="_blank">专职传奇月入百万</a></li>
+                                                    <li><em>6</em><a data-tjname="game,remen,txtlink,," data-pos="5" href="http://tg.dswef.com/jyjx/6/index.html?uid=76546&suid=76546-6" target="_blank">变态传奇</a></li>
+                                                    <li><em>7</em><a data-tjname="game,remen,txtlink,," data-pos="6" href="http://tg.dswef.com/dzz/12/index.html?uid=76546&suid=76546-13" target="_blank">新版传奇爆率超高</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </code>
+            </div>
+            <!-- 生活这点事 -->
+            <a id="J-lc-life" name="sectionLife"></a>
+            <div class="section-life">
+                <code id="J-lc-life_con" class="none">
+                    <div class="w1000">
+                        <div class="section">
+                            <div class="section-h clearfix">
+                                <div class="fr sub-title">
+                                </div>
+                                <h4 class="fl title"><a target="_blank" href="http://mini.eastday.com/health.html?qid=7654dh" class="icon i-life" data-tjname="news,life,tab,tab1">生活这点事</a></h4>
+                                <a target="_blank" href="http://mini.eastday.com/health.html?qid=7654dh" class="tab tab-active" data-tjname="news,life,tab,,tab2">日常生活<span class="line"></span></a>
+                            </div>
+                            <div class="section-b section-b-life pr">
+<!--                                <div class="J-life-tab-1 clearfix">-->
+<!---->
+<!--                                    <div class="B-life-tab-1 clearfix">-->
+<!---->
+<!--                                        <ul class="J-zg-carousel-list zg-carousel-list">-->
+<!---->
+<!--                                            --><?//
+//                                            //$licount = floor(count($jiankang_data)/8);
+//                                            $licount = 1;
+//                                            for($i=0;$i<$licount;$i++){ ?>
+<!--                                                <li class="clearfix" style=" --><?//if($i<>0){?><?//}?><!--">-->
+<!--                                                    --><?//
+//                                                    $divdata = array_slice($jiankang_data, $i*10,10);
+//                                                    foreach ($divdata as $k=>$v){
+//                                                        ?>
+<!--                                                        <div class="fl vt info">-->
+<!--                                                            <a data-tjname="news,life,imglink,imglink--><?//=($i*10+$k)?><!--" data-pos="--><?//=($i*10+$k)?><!--" href="--><?//= $v['url']?><!--" target="_blank"><span class="img"><img src="--><?// rand_url($type); ?><!--img/loading.png" class="lazy6" data-original="--><?//= $v['img']?><!--"></span>-->
+<!--                                                                <span class="txt">--><?//= $v['title']?><!--</span>-->
+<!--                                                            </a>-->
+<!--                                                        </div>-->
+<!--                                                    --><?// } ?>
+<!--                                                </li>-->
+<!--                                            --><?// } ?>
+<!--                                        </ul>-->
+<!---->
+<!--                                       -->
+<!--<!--                                   <div class="gl_space" style="width:1170px;height:auto;background:red">121</div>-->
+<!--                                        <a data-tjname="news,life,switch,prev" data-pos="1" href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一页" ></a>-->
+<!--                                        <a data-tjname="news,life,switch,next" data-pos="2" href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一页" ></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+                                <div class="gl_space">
+
+                                    <div class="gl_left">
+                                       <a data-tjname="news,life,imglink,imglink0" href="<?=$jiankang_data[0]['url']?>" data-pos="0" target="_blank"><img src="<?=$jiankang_data[0]['img']?>" class="gl_lf_img"/>
+                                       <div class="gl_ls_bj"> </div>
+                                       <div class="gl_title"><?=$jiankang_data[0]['title']?></div>
+                                       </a>
+                                    </div>
+                                    <div class="gl_left_2">
+                                        <a data-tjname="news,life,imglink,imglink1" href="<?=$jiankang_data[1]['url']?>" data-pos="1" target="_blank">
+                                            <div class="gl_ls_bj_2"> </div>
+                                            <div class="gl_title_2"><?=$jiankang_data[1]['title']?></div>
+                                            <img src="<?=$jiankang_data[1]['img']?>" class="gl_lf_img2"></a>
+                                        <a data-tjname="news,life,imglink,imglink2" href="<?=$jiankang_data[2]['url']?>" data-pos="2" target="_blank">
+                                            <div class="gl_ls_bj_2"> </div>
+                                            <div class="gl_title_2"><?=$jiankang_data[2]['title']?></div>
+                                            <img src="<?=$jiankang_data[2]['img']?>" class="gl_lf_img2"></a>
+
+
+                                    </div>
+                                    <div class="gl_list">
+
+                                           <div class="gl_ls">
+                                               <ul>
+                                                   <li class="acc_font"><em></em><a data-tjname="news,life,txtlink,txtlink3" data-pos="3" href="<?=$jiankang_data[3]['url']?>" target="_blank" ><?=$jiankang_data[3]['title']?></a></li>
+                                                   <li><em></em><a data-tjname="news,life,txtlink,txtlink4" data-pos="4" href="<?=$jiankang_data[4]['url']?>" target="_blank" ><?=$jiankang_data[4]['title']?></a></li>
+                                                   <li><em></em><a data-tjname="news,life,txtlink,txtlink5" data-pos="5" href="<?=$jiankang_data[5]['url']?>" target="_blank" ><?=$jiankang_data[5]['title']?></a></li>
+                                                   <li><em></em><a data-tjname="news,life,txtlink,txtlink6" data-pos="6" href="<?=$jiankang_data[6]['url']?>" target="_blank" ><?=$jiankang_data[6]['title']?></a></li>
+                                                   <li><em></em><a data-tjname="news,life,txtlink,txtlink7" data-pos="7" href="<?=$jiankang_data[7]['url']?>" target="_blank" ><?=$jiankang_data[7]['title']?></a></li>
+                                               </ul>
+                                           </div>
+                                           <div class="gl_ls">
+                                               <ul>
+                                                   <li class="acc_font2"><em></em><a data-tjname="news,life,txtlink,txtlink8" data-pos="8" href="<?=$jiankang_data[8]['url']?>" target="_blank" ><?=$jiankang_data[8]['title']?></a></li>
+                                                   <li><em></em><a data-tjname="news,life,txtlink,txtlink9" data-pos="9" href="<?=$jiankang_data[9]['url']?>" target="_blank" ><?=$jiankang_data[9]['title']?></a></li>
+                                                   <li><em></em><a data-tjname="news,life,txtlink,txtlink10" data-pos="10" href="<?=$jiankang_data[10]['url']?>" target="_blank" ><?=$jiankang_data[10]['title']?></a></li>
+                                                   <li><em></em><a data-tjname="news,life,txtlink,txtlink11" data-pos="11" href="<?=$jiankang_data[11]['url']?>" target="_blank" ><?=$jiankang_data[11]['title']?></a></li>
+                                                   <li><em></em><a data-tjname="news,life,txtlink,txtlink12" data-pos="12" href="<?=$jiankang_data[12]['url']?>" target="_blank" ><?=$jiankang_data[12]['title']?></a></li>
+                                               </ul>
+                                           </div>
+
+                                    </div>
+                                    <div class="gl_right">
+                                        <a data-tjname="news,life,imglink,imglink13" data-pos="13" href="<?=$jiankang_data[13]['url']?>" target="_blank">
+                                            <div class="gl_ls_bj_2"> </div>
+                                            <div class="gl_title_2"><?=$jiankang_data[13]['title']?></div>
+                                            <img src="<?=$jiankang_data[13]['img']?>" class="gl_lf_img2"></a>
+                                        <a data-tjname="news,life,imglink,imglink14" data-pos="14" href="<?=$jiankang_data[14]['url']?>" target="_blank">
+                                            <div class="gl_ls_bj_2"> </div>
+                                            <div class="gl_title_2"><?=$jiankang_data[14]['title']?></div>
+                                   <img src="<?=$jiankang_data[14]['img']?>" class="gl_lf_img2"></a>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </code>
+            </div>
+
+            <!-- 打发无聊 -->
+            <a id="J-lc-boring" name="sectionBoring"></a>
+
+            <div class="section-boring">
+                <code id="J-lc-boring_con" class="none">
+                    <div class="w1000">
+                        <div class="section">
+                            <div class="section-h clearfix">
+                                <div class="fr sub-title"></div>
+                                <h4 class="fl title"><a target="_blank" href="http://mini.eastday.com/society.html?qid=7654dh" class="icon i-boring" data-tjname="news,hotnews,tab,tab1">图文热点</a></h4>
+                                <a target="_blank" href="http://mini.eastday.com/society.html?qid=7654dh" class="tab tab-active" data-tjname="news,hotnews,tab,tab2">大家在看<span class="line"></span></a>
+                            </div>
+                            <div class="section-b section-b-boring pr">
+                                <div class="B-boring-tab-1 clearfix">
+                                    <ul class="J-zg-carousel-list zg-carousel-list">
+
+                                        <?
+                                        //$licount = floor(count($shishang_data)/10);
+                                        $licount = 1;
+                                        for($i=0;$i<$licount;$i++){ ?>
+                                            <li class="clearfix" style=" <?if($i<>0){?>display: none;<?}?>">
+                                                <?php
+                                                $divdata = array_slice($shishang_data, $i*10,10);
+                                                foreach ($divdata as $k=>$v){
+                                                    ?>
+                                                    <div class="fl vt info">
+                                                        <a data-tjname="news,hotnews,imglink,imglink<?=($i*8+$k)?>" data-pos="<?=($i*8+$k)?>" href="<?= $v['url']?>" target="_blank">
+                                                        <span class="img">
+                                                       <img src="<? rand_url($type); ?>img/loading.png" class="lazy7" data-original="<?= $v['img']?>">
+                                                        </span>
+                                                            <span class="txt"><?= $v['title']?></span>
+                                                        </a>
+                                                    </div>
+                                                <?php   } ?>
+                                            </li>
+                                        <? } ?>
+                                    </ul>
+                                    <a data-tjname="news,hotnews,switch,prev" data-pos="1" href="javascript:;" class="J-zg-carousel-prev zg-carousel-prev" title="上一页" ></a>
+                                    <a data-tjname="news,hotnews,switch,next" data-pos="2" href="javascript:;" class="J-zg-carousel-next zg-carousel-next" title="下一页" ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </code>
+            </div>
+            <a id="J-lc-jingxuan" name="sectioNnews"></a>
+            <div class="dh_news3 clearfix">
+
+                <div class="dh_left fl">
+                    <ul class="dh_news_nav clearfix">
+                        <li class="on" data-target="dh_jingxuan"><a href="http://mini.eastday.com/?qid=7654dh02" data-tjname="news,bottom,dh_jingxuan,," target="_blank">精选<span class="line index-icon"></span></a></li>
+                        <li data-target="dh_xiaohua"><a href="http://mini.eastday.com/joke.html?qid=7654dh02" data-tjname="news,bottom,dh_xiaohua,," target="_blank">笑话<span class="line index-icon"></span></a></li>
+                        <li data-target="dh_qiwen"><a href="http://mini.eastday.com/society.html?qid=7654dh02" data-tjname="news,bottom,dh_qiwen,," target="_blank">奇闻<span class="line index-icon"></span></a></li>
+                        <li data-target="dh_mingxing"><a href="http://mini.eastday.com/ent.html?qid=7654dh02" data-tjname="news,bottom,dh_mingxing,," target="_blank">明星<span class="line index-icon"></span></a></li>
+                        <li data-target="dh_guonei"><a href="http://mini.eastday.com/mainland.html?qid=7654dh02" data-tjname="news,bottom,dh_guonei,," target="_blank">国内<span class="line index-icon"></span></a></li>
+                        <li data-target="dh_guoji"><a href="http://mini.eastday.com/world.html?qid=7654dh02" data-tjname="news,bottom,dh_guoji,," target="_blank">国际<span class="line index-icon"></span></a></li>
+                        <li data-target="dh_jiankang"><a href="http://mini.eastday.com/health.html?qid=7654dh" data-tjname="news,bottom,dh_jiankang,," target="_blank">健康<span class="line index-icon"></span></a></li>
+                        <li data-target="dh_caijing"><a href="http://mini.eastday.com/finance.html?qid=7654dh02" data-tjname="news,bottom,dh_caijing,," target="_blank">财经<span class="line index-icon"></span></a></li>
+                        <li class="last-child" data-target="dh_keji"><a href="http://mini.eastday.com/tech.html?qid=7654dh02" data-tjname="news,bottom,dh_keji,," target="_blank">科技<span class="line index-icon"></span></a></li>
+                    </ul>
+                    <div class="dh_left_con dh_jingxuan"><p style="padding:20px 0;font-size:14px;color:#666;text-align: center;">数据加载中...</p></div>
+                    <div class="dh_left_con dh_guonei none"><p style="padding:20px 0;font-size:14px;color:#666;text-align: center;">数据加载中...</p></div>
+                    <div class="dh_left_con dh_guoji none"><p style="padding:20px 0;font-size:14px;color:#666;text-align: center;">数据加载中...</p></div>
+                    <div class="dh_left_con dh_xiaohua none"><p style="padding:20px 0;font-size:14px;color:#666;text-align: center;">数据加载中...</p></div>
+                    <div class="dh_left_con dh_qiwen none"><p style="padding:20px 0;font-size:14px;color:#666;text-align: center;">数据加载中...</p></div>
+                    <div class="dh_left_con dh_mingxing none"><p style="padding:20px 0;font-size:14px;color:#666;text-align: center;">数据加载中...</p></div>
+                    <div class="dh_left_con dh_jiankang none"><p style="padding:20px 0;font-size:14px;color:#666;text-align: center;">数据加载中...</p></div>
+                    <div class="dh_left_con dh_caijing none"><p style="padding:20px 0;font-size:14px;color:#666;text-align: center;">数据加载中...</p></div>
+                    <div class="dh_left_con dh_keji none"><p style="padding:20px 0;font-size:14px;color:#666;text-align: center;">数据加载中...</p></div>
+                </div>
+                <div class="dh_right fr">
+                    <div class="dh_top" id="dh_top"><a href="http://mini.eastday.com/society.html?qid=7654dh02" target="_blank" data-tjname="news,bottom,qipa,,">奇葩资讯</a></div>
+                    <div class="right_content">
+                        <ul class="dh_right_con clearfix"></ul>
+                        <div style="margin: 10px 0;margin-top: -10px;" id="dh_ogs"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /body -->
+    <div class="xiaohua_con"></div>
+    <div class="youhui_con"></div>
+    <? readFilePath(SITE_DIR.'/tpl/html/footer.html');?>
+</div>
+<!-- 右侧边导航栏 -->
+<div class="sidebar-wrap">
+    <? if($rightImg['img']){?>
+        <div class="sidebarimg"><a data-name="oglas" target="_blank" href="<?=$rightImg['url']?>"><img src="<?=$rightImg['img']?>" alt=""></a></div>
+    <? } ?>
+
+    <div id="J_sidebar" class="sidebar">
+        <a class="lc-toutiao" data-tjname="sidebar_right,toutiao,null,toutiao" data-pos="7" target="_blank" href="javascript:;" title="跳到玩游戏"><span>头条</span></a>
+        <a class="lc-game" data-tjname="sidebar_right,game,null,game" data-pos="1" target="_blank" href="javascript:;" title="跳到玩游戏"><span>游戏</span></a>
+        <a class="lc-life" data-tjname="sidebar_right,life,null,life" data-pos="4" target="_blank" href="javascript:;" title="跳到生活"><span>生活</span></a>
+        <a class="lc-boring" data-tjname="sidebar_right,boring,null,boring" data-pos="4" target="_blank" href="javascript:;" title="跳到图文热点"><span>热点</span></a>
+        <a class="lc-jingxuan" data-tjname="sidebar_right,jingxuan,null,jingxuan" data-pos="5" target="_blank" href="javascript:;" title="跳到精选"><span>精选</span></a>
+        <a id="J_edge" data-tjname="" cidata-pos="6" ="" target="_blank" href="javascript:;" title="滚到底部"><span>底部</span></a>
+    </div>
+</div>
+
+
+
+
+<?// readFilePath(SITE_DIR.'/tpl/html/footergg.html');?>
+
+
+<script src="<? rand_url($type); ?>js/jquery.zgcarousel.min.js"></script>
+<script src="<? rand_url($type); ?>js/jquery.lazyload.min.js"></script>
+<script>
+    var rand_url = ['<? rand_url($type); ?>','<? rand_url($type); ?>','<? rand_url($type); ?>','<? rand_url($type); ?>','<? rand_url($type); ?>'] ;
+</script>
+<?/*<script><? readFilePath(SITE_DIR.'/tplX/js/page.min.js');?></script> */?>
+
+<script src="<? rand_url($type); ?>js/page.js?v=004101707"></script>
+<script src="<? rand_url($type); ?>js/track_log.js?v=003231707"></script>
+
+
+<!--[if lte IE 6]>
+
+<? readFilePath(SITE_DIR.'/tpl/html/cnzz.html');?>
+
+
+<script>
+    //jQuery.getScript("http://cdn1.guangsuss.com/tpl/data/lastinit.js");
+</script>
+</body>
+</html>

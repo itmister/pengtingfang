@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+   <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+   
+   <script src="jquery.form.js"></script>
+   
+</head>
+
+<body class="">
+
+<!--HTML-->
+<div id="content">
+    <form class="form"  method='post' action='/index.php'>
+        <input id="userName" name="userName" value="姓名" />
+        <input id="age" name="age" value="30" />
+        
+        
+        <input id="myButton" type="submit" value="submit" />
+        
+    </form>
+ 	
+ 	<a id="abc">TTTT</a>
+    
+ </div>   
+    <!--javascript-->
+    <script type="text/javascript">
+        $(function () {
+            var ajaxFormOption = {
+                success: function (data) { //提交成功的回调函数  
+                    $("#content").html(data);
+                    aaa();
+                }
+            };
+            
+           var aaa= function(){
+	           $("#content .form111").on('submit',function(){
+	           	
+	           		$(this).ajaxSubmit(ajaxFormOption);
+	           		
+	           		return false;
+	           	
+	           });
+	           
+	           
+	           $("#abc").click(function(){
+	           		$(".form #userName").resetFields();
+	           })
+		  }
+					
+            aaa();
+        });
+    </script>
+    
+    
+    
+    
+</body>
+</html>

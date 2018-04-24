@@ -1,0 +1,3 @@
+百度上传插件 ：helloweba_webuploader/
+有待验证的上传：bigupload.php
+使用过的上传action：UploadController.class.php
