@@ -1,5 +1,15 @@
 <?php
 
+$json='{\"deviceid":"\AE37F9A9\0EB272","uid":"1"}';
+print_r($json);
+echo "<hr><pre>";
+
+$data = json_decode($json,1);
+print_r($data);
+die;
+
+
+
 echo fopen("http://admin.wenhu.7654.com/index/api/getData/id/2" ,'rb');
 die;
 

@@ -1,5 +1,8 @@
 <?php
 
+echo  floor(1.26*10)/10;
+die;
+
 //ECHO date("Ymd", strtotime("+7day",time())) ;
 //
 //
